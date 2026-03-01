@@ -159,7 +159,7 @@ export default function About() {
   return (
     <main>
       {/* Hero */}
-      <section className="min-h-[50vh] flex items-center bg-navy-900 text-white">
+      <section className="min-h-[50vh] flex items-center bg-dark-900 text-white">
         <div className="max-w-5xl mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-6">
             About BAE Systems
@@ -179,6 +179,7 @@ export default function About() {
           <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-14">
             Our Journey
           </h2>
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
           <div className="relative">
             <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-navy-200 -translate-x-1/2" />
             {milestones.map((m, i) => (
@@ -214,6 +215,7 @@ export default function About() {
           <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
             Our Vision &amp; Values
           </h2>
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
           <p className="text-center text-steel-700 mb-12 max-w-2xl mx-auto">
             Our values define who we are and guide every decision we make.
           </p>
@@ -244,6 +246,7 @@ export default function About() {
           <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-12">
             Leadership Team
           </h2>
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {leaders.map((l) => (
               <div
@@ -276,6 +279,7 @@ export default function About() {
           <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
             Global Presence
           </h2>
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
           <p className="text-center text-steel-700 mb-12 max-w-2xl mx-auto">
             With offices and operations around the world, we deliver critical
             capabilities wherever they are needed.
@@ -307,6 +311,7 @@ export default function About() {
           <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
             Culture &amp; Benefits
           </h2>
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
           <p className="text-center text-steel-700 mb-12 max-w-2xl mx-auto">
             Discover what it's like to work at BAE Systems and the benefits that
             support your career and wellbeing.
@@ -333,7 +338,7 @@ export default function About() {
       </section>
 
       {/* Certifications */}
-      <section className="bg-navy-900 py-14 px-4 lg:px-8">
+      <section className="bg-dark-900 py-14 px-4 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl font-heading font-bold text-white mb-8">
             Certifications &amp; Standards

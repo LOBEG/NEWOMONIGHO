@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-dark-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Privacy Policy

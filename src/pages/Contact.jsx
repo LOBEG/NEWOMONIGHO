@@ -62,7 +62,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-dark-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -175,7 +175,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full bg-navy-900 text-white py-3 rounded-lg font-semibold hover:bg-navy-800 transition-colors disabled:opacity-50"
+              className="w-full bg-dark-900 text-white py-3 rounded-lg font-semibold hover:bg-dark-800 transition-colors disabled:opacity-50"
             >
               {status === "sending" ? "Sending..." : "Submit"}
             </button>

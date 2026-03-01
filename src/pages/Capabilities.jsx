@@ -108,7 +108,7 @@ export default function Capabilities() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-navy-900 text-white py-20 px-4 lg:px-8">
+      <section className="bg-dark-900 text-white py-20 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">What We Do</h1>
           <p className="max-w-2xl mx-auto text-lg text-navy-200">
@@ -261,7 +261,7 @@ export default function Capabilities() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 lg:px-8 bg-navy-900 text-white text-center">
+      <section className="py-20 px-4 lg:px-8 bg-dark-900 text-white text-center">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Make an Impact?

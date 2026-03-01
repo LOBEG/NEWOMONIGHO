@@ -59,7 +59,7 @@ export default function News() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-dark-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             News &amp; Press Center
@@ -80,7 +80,7 @@ export default function News() {
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2 rounded-full font-medium transition-colors ${
                 activeCategory === cat
-                  ? "bg-navy-900 text-white"
+                  ? "bg-dark-900 text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
@@ -128,7 +128,7 @@ export default function News() {
           </p>
           <a
             href="#"
-            className="inline-block bg-navy-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-navy-800 transition-colors mb-6"
+            className="inline-block bg-dark-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-dark-800 transition-colors mb-6"
           >
             Download Press Kit
           </a>

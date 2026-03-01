@@ -62,7 +62,7 @@ export default function Investors() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-navy-900 text-white py-20">
+      <section className="bg-dark-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Investor Relations
@@ -221,7 +221,7 @@ export default function Investors() {
       </section>
 
       {/* Contact */}
-      <section className="bg-navy-900 text-white py-16">
+      <section className="bg-dark-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Investor Relations Contact

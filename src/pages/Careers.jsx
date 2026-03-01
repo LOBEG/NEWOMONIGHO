@@ -76,7 +76,7 @@ export default function Careers() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-navy-900 text-white py-20 px-4">
+      <section className="bg-dark-900 text-white py-20 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">

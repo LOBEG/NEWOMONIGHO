@@ -20,7 +20,7 @@ export default function JobDetail() {
   return (
     <main>
       {/* Header */}
-      <section className="bg-navy-900 text-white py-16 px-4">
+      <section className="bg-dark-900 text-white py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <Link to="/careers/jobs" className="text-gray-400 hover:text-white text-sm mb-4 inline-block">
             ← Back to All Jobs

@@ -92,7 +92,7 @@ export default function Businesses() {
   return (
     <main>
       {/* Hero */}
-      <section className="min-h-[70vh] flex items-center bg-gradient-to-b from-navy-900 to-navy-950 text-white">
+      <section className="min-h-[70vh] flex items-center bg-gradient-to-b from-dark-900 to-dark-950 text-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-20 text-center">
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Our Businesses
@@ -172,7 +172,7 @@ export default function Businesses() {
       ))}
 
       {/* CTA */}
-      <section className="bg-navy-900 text-white">
+      <section className="bg-dark-900 text-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-20 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
             Partner With Us
