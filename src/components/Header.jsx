@@ -2,14 +2,13 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'About Us', to: '/about' },
-  { label: 'Our Businesses', to: '/businesses' },
-  { label: 'What We Do', to: '/capabilities' },
+  { label: 'Who we are', to: '/about' },
+  { label: 'What we do', to: '/capabilities' },
+  { label: 'Our businesses', to: '/businesses' },
+  { label: 'Newsroom', to: '/news' },
   { label: 'Careers', to: '/careers' },
-  { label: 'News', to: '/news' },
+  { label: 'Suppliers', to: '/contact' },
   { label: 'Contact', to: '/contact' },
-  { label: 'Investor Relations', to: '/investors' },
 ];
 
 export default function Header() {
@@ -43,42 +42,24 @@ export default function Header() {
   }, [searchOpen]);
 
   const linkClass = ({ isActive }) =>
-    `relative px-1 py-2 text-sm font-medium transition-colors hover:text-accent-400 ${
+    `relative px-1 py-4 text-sm font-medium tracking-wide transition-colors hover:text-accent-500 ${
       isActive
-        ? 'text-accent-400 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent-500'
-        : 'text-white'
+        ? 'text-accent-500 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-accent-500'
+        : 'text-[#1E1E1E]'
     }`;
 
   return (
     <header
       className={`sticky top-0 z-50 transition-shadow duration-300 ${
-        scrolled ? 'shadow-lg shadow-black/30' : ''
+        scrolled ? 'shadow-md shadow-black/10' : ''
       }`}
     >
-      {/* Top utility bar */}
-      <div className="bg-dark-950 text-gray-400 text-xs">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-1.5 lg:px-8">
-          <span className="hidden sm:inline">A global defense, aerospace, and security company</span>
-          <div className="flex items-center gap-4 ml-auto">
-            <span className="hidden sm:inline">🌐 English (US)</span>
-            <button
-              type="button"
-              className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
-              onClick={() => setSearchOpen(!searchOpen)}
-              aria-label="Search"
-            >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <span>Search</span>
-            </button>
-          </div>
-        </div>
-      </div>
+      {/* Thin red accent line at the very top */}
+      <div className="h-1 bg-accent-500" aria-hidden="true" />
 
-      {/* Main nav bar */}
+      {/* Main nav bar — white background */}
       <nav
-        className="bg-dark-900 border-b-2 border-accent-500"
+        className="bg-white border-b border-steel-100"
         aria-label="Primary navigation"
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
@@ -88,66 +69,85 @@ export default function Header() {
             className="flex items-center gap-2 whitespace-nowrap"
             aria-label="BAE Systems home"
           >
-            {/* BAE Systems styled logo mark */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-accent-500 rounded-sm flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-              <span className="font-heading text-xl font-bold tracking-wide text-white">
-                BAE Systems
-              </span>
-            </div>
+            <img
+              src="https://www.baesystems.com/.resources/bae-systems-theme/img/logo-red.svg"
+              alt="BAE Systems"
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden items-center gap-5 xl:flex" role="list">
-            {navItems.map(({ label, to }) => (
-              <li key={to}>
-                <NavLink to={to} end={to === '/'} className={linkClass}>
-                  {label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden items-center gap-6 xl:flex">
+            <ul className="flex items-center gap-5" role="list">
+              {navItems.map(({ label, to }) => (
+                <li key={label}>
+                  <NavLink to={to} className={linkClass}>
+                    {label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
 
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-dark-800 focus:ring-2 focus:ring-accent-500 focus:outline-none xl:hidden"
-            aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            {menuOpen ? (
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            {/* Search icon */}
+            <button
+              type="button"
+              className="ml-2 flex items-center justify-center rounded-full p-2 text-steel-500 hover:text-accent-500 transition-colors"
+              onClick={() => setSearchOpen(!searchOpen)}
+              aria-label="Search"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-            ) : (
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </button>
+          </div>
+
+          {/* Mobile: search + hamburger */}
+          <div className="flex items-center gap-2 xl:hidden">
+            <button
+              type="button"
+              className="p-2 text-steel-500 hover:text-accent-500 transition-colors"
+              onClick={() => setSearchOpen(!searchOpen)}
+              aria-label="Search"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-            )}
-          </button>
+            </button>
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-md p-2 text-[#1E1E1E] hover:bg-steel-50 focus:ring-2 focus:ring-accent-500 focus:outline-none"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              onClick={() => setMenuOpen((prev) => !prev)}
+            >
+              {menuOpen ? (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
         {menuOpen && (
           <ul
             id="mobile-menu"
-            className="space-y-1 border-t border-dark-800 px-4 pb-4 pt-2 xl:hidden bg-dark-900"
+            className="space-y-1 border-t border-steel-100 px-4 pb-4 pt-2 xl:hidden bg-white"
             role="list"
           >
             {navItems.map(({ label, to }) => (
-              <li key={to}>
+              <li key={label}>
                 <NavLink
                   to={to}
-                  end={to === '/'}
                   className={({ isActive }) =>
-                    `block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-dark-800 ${
-                      isActive ? 'text-accent-400 bg-dark-800' : 'text-white'
+                    `block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-steel-50 ${
+                      isActive ? 'text-accent-500 bg-steel-50' : 'text-[#1E1E1E]'
                     }`
                   }
                   onClick={() => setMenuOpen(false)}
@@ -162,10 +162,10 @@ export default function Header() {
 
       {/* Search overlay */}
       {searchOpen && (
-        <div className="bg-dark-900/95 border-b border-dark-800">
+        <div className="bg-white border-b border-steel-200 shadow-sm">
           <div className="mx-auto max-w-3xl px-4 py-4">
             <div className="flex items-center gap-3">
-              <svg className="w-5 h-5 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-5 h-5 text-steel-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <input
@@ -173,13 +173,13 @@ export default function Header() {
                 placeholder="Search BAE Systems..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 bg-transparent text-white placeholder-gray-400 text-lg focus:outline-none"
+                className="flex-1 bg-transparent text-[#1E1E1E] placeholder-steel-400 text-lg focus:outline-none"
                 autoFocus
               />
               <button
                 type="button"
                 onClick={() => { setSearchOpen(false); setSearchQuery(''); }}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-steel-400 hover:text-accent-500 transition-colors"
                 aria-label="Close search"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -713,12 +713,13 @@ export default function Apply() {
                 onBlur={() => handleBlur("gdprConsent")}
               />
               <span>
-                I consent to BAE Systems processing my personal data for
-                recruitment purposes in accordance with the{" "}
+                I consent to BAE Systems, Inc. processing my personal data
+                for recruitment purposes in accordance with the{" "}
                 <span className="text-accent-500 underline">
                   Privacy Policy
                 </span>{" "}
-                and GDPR regulations. <span className="text-red-500">*</span>
+                and applicable U.S. privacy laws.{" "}
+                <span className="text-red-500">*</span>
               </span>
             </label>
             {touched.gdprConsent && errors.gdprConsent && (

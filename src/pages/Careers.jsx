@@ -3,71 +3,65 @@ import jobs from "../data/jobs";
 
 const whyCards = [
   {
-    icon: "🚀",
-    title: "Innovative Projects",
+    title: "Cutting-Edge Defense Programs",
     description:
-      "Work on cutting-edge defence and security programmes that push the boundaries of technology.",
+      "Develop next-generation electronic warfare, autonomous systems, and cybersecurity solutions that keep America's armed forces ahead of every threat.",
   },
   {
-    icon: "📈",
-    title: "Career Growth",
+    title: "Career Growth & Advancement",
     description:
-      "Structured development pathways, mentorship, and opportunities to advance across global teams.",
+      "Structured career paths, leadership development programs, and mentorship from industry veterans help you advance across BAE Systems, Inc.",
   },
   {
-    icon: "💎",
-    title: "Competitive Benefits",
+    title: "Competitive Compensation",
     description:
-      "Industry-leading compensation packages, bonuses, and comprehensive health and retirement plans.",
+      "Top-tier salaries, performance bonuses, and equity programs that recognize your contributions to our nation's most critical missions.",
   },
   {
-    icon: "🌍",
-    title: "Global Impact",
+    title: "National Impact",
     description:
-      "Contribute to projects that protect nations and communities around the world.",
+      "Your work directly protects the U.S. warfighter — from the soldier on the ground to the pilot in the cockpit — safeguarding American security every day.",
   },
   {
-    icon: "⚖️",
     title: "Work-Life Balance",
     description:
-      "Flexible working arrangements, generous leave policies, and family-friendly benefits.",
+      "Flexible schedules, hybrid work options, and generous PTO so you can recharge and spend time with the people who matter most.",
   },
   {
-    icon: "🤝",
-    title: "Diverse & Inclusive",
+    title: "Diversity & Inclusion",
     description:
-      "A welcoming culture where every background and perspective is valued and celebrated.",
+      "Employee resource groups, equitable hiring practices, and a culture where every background and perspective strengthens our mission.",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      "Joining BAE Systems was the best career decision I ever made. The projects are genuinely world-class and the support for professional development is outstanding.",
-    name: "Rebecca Hartley",
-    role: "Principal Systems Engineer, 7 years",
+      "BAE Systems, Inc. gave me the chance to work on electronic warfare programs that truly make a difference for our troops. The engineering culture here is second to none, and I've grown more in five years than I thought possible.",
+    name: "Sarah Mitchell",
+    role: "Senior Systems Engineer — Nashua, NH · 5 years",
   },
   {
     quote:
-      "I started as a graduate and now lead a team of 20 cyber analysts. The growth opportunities here are real — leadership actively invests in your future.",
-    name: "Marcus Chen",
-    role: "Cyber Operations Lead, 5 years",
+      "I joined as a junior intelligence analyst and now lead a team supporting some of the Department of Defense's highest-priority programs. Leadership genuinely invests in your development and career trajectory.",
+    name: "James Rivera",
+    role: "Intelligence Analyst — Arlington, VA · 6 years",
   },
   {
     quote:
-      "The collaborative culture is what sets this company apart. Engineers, analysts, and programme managers all work together seamlessly across borders.",
-    name: "Priya Kapoor",
-    role: "Software Architect, 4 years",
+      "Managing programs for the U.S. Navy at BAE Systems has been the most rewarding chapter of my career. The collaborative environment across our San Diego site makes complex defense programs feel achievable every single day.",
+    name: "Karen Nguyen",
+    role: "Program Manager — San Diego, CA · 8 years",
   },
 ];
 
-const benefitsHighlight = [
-  { icon: "🏥", title: "Health Insurance", description: "Comprehensive medical, dental, and vision coverage for you and your family." },
-  { icon: "💰", title: "401k / Pension", description: "Generous employer-matched retirement plans to secure your future." },
-  { icon: "📚", title: "Training Programs", description: "Funded certifications, courses, and conferences to keep your skills sharp." },
-  { icon: "🏠", title: "Remote Work Options", description: "Flexible hybrid and remote arrangements to fit your lifestyle." },
-  { icon: "🌴", title: "Paid Time Off", description: "Generous annual leave, public holidays, and additional wellbeing days." },
-  { icon: "✈️", title: "Relocation Support", description: "Full relocation packages including housing assistance and travel costs." },
+const benefits = [
+  { title: "401(k) Matching", description: "Generous company match on your 401(k) contributions so you can build long-term financial security." },
+  { title: "Health, Dental & Vision", description: "Comprehensive medical, dental, and vision insurance plans for you and your dependents." },
+  { title: "Tuition Reimbursement", description: "Financial support for undergraduate and graduate coursework, certifications, and professional development." },
+  { title: "Flexible & Hybrid Work", description: "Work-from-home options and flexible schedules that let you balance mission-critical work with everyday life." },
+  { title: "Paid Time Off", description: "Competitive PTO, federal holidays, and personal days to rest, recharge, and take care of what matters." },
+  { title: "Relocation Assistance", description: "Full relocation packages including moving expenses, temporary housing, and travel reimbursement." },
 ];
 
 const featuredJobs = jobs.slice(0, 5);
@@ -76,25 +70,57 @@ export default function Careers() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-dark-900 text-white py-20 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            Build your career at one of the world's most innovative defence and security companies. We're looking for passionate people ready to make a difference.
+      <section className="relative bg-dark-900 text-white py-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-900/80 to-dark-900/90" />
+        <div className="relative max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Build a Career That Matters
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+            BAE Systems, Inc. is one of America's premier defense contractors.
+            Join a team that delivers advanced technology solutions to protect
+            the U.S. warfighter and strengthen our national security.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/careers/jobs"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded bg-accent-500 hover:bg-accent-600 text-white font-semibold transition-colors"
+            >
+              Search Open Positions
+            </Link>
+            <a
+              href="#why-bae"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded border border-white/30 hover:bg-white/10 text-white font-semibold transition-colors"
+            >
+              Why BAE Systems
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Why Work With Us */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section id="why-bae" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-12">Why Work With Us</h2>
+          <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
+            Why Work With Us
+          </h2>
+          <p className="text-center text-steel-600 max-w-2xl mx-auto mb-14">
+            At BAE Systems, Inc., your career is built on purpose — protecting
+            national security while growing professionally in a supportive,
+            innovative environment.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyCards.map((card) => (
-              <div key={card.title} className="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition-shadow">
-                <span className="text-4xl mb-4 block">{card.icon}</span>
-                <h3 className="text-xl font-semibold text-navy-900 mb-2">{card.title}</h3>
-                <p className="text-gray-600">{card.description}</p>
+              <div
+                key={card.title}
+                className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-lg font-semibold text-navy-900 mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {card.description}
+                </p>
               </div>
             ))}
           </div>
@@ -102,16 +128,23 @@ export default function Careers() {
       </section>
 
       {/* Employee Testimonials */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 bg-steel-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-12">What Our People Say</h2>
+          <h2 className="text-3xl font-bold text-navy-900 text-center mb-14">
+            What Our People Say
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-white border border-gray-200 rounded-lg p-6 flex flex-col">
-                <p className="text-gray-700 italic flex-1 mb-4">"{t.quote}"</p>
-                <div>
+              <div
+                key={t.name}
+                className="bg-white rounded-lg p-8 flex flex-col shadow-sm"
+              >
+                <blockquote className="text-gray-700 text-sm leading-relaxed flex-1 mb-6">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <div className="border-t border-gray-100 pt-4">
                   <p className="font-semibold text-navy-900">{t.name}</p>
-                  <p className="text-sm text-gray-500">{t.role}</p>
+                  <p className="text-sm text-gray-500 mt-0.5">{t.role}</p>
                 </div>
               </div>
             ))}
@@ -119,16 +152,28 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* Benefits Highlight */}
-      <section className="py-16 px-4 bg-gray-50">
+      {/* Benefits & Perks */}
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-12">Benefits & Perks</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefitsHighlight.map((b) => (
-              <div key={b.title} className="bg-white rounded-lg shadow p-6 text-center">
-                <span className="text-3xl mb-3 block">{b.icon}</span>
-                <h3 className="text-lg font-semibold text-navy-900 mb-1">{b.title}</h3>
-                <p className="text-gray-600 text-sm">{b.description}</p>
+          <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
+            Benefits &amp; Perks
+          </h2>
+          <p className="text-center text-steel-600 max-w-2xl mx-auto mb-14">
+            We invest in our people with comprehensive benefits that support
+            your health, finances, career development, and quality of life.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((b) => (
+              <div
+                key={b.title}
+                className="border border-gray-200 rounded-lg p-6"
+              >
+                <h3 className="text-base font-semibold text-navy-900 mb-2">
+                  {b.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {b.description}
+                </p>
               </div>
             ))}
           </div>
@@ -136,28 +181,47 @@ export default function Careers() {
       </section>
 
       {/* Featured Positions */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 bg-steel-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-12">Featured Positions</h2>
+          <h2 className="text-3xl font-bold text-navy-900 text-center mb-14">
+            Featured Positions
+          </h2>
           <div className="space-y-4">
             {featuredJobs.map((job) => (
               <Link
                 key={job.id}
                 to={`/careers/jobs/${job.id}`}
-                className="block bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+                className="flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-5 hover:shadow-md transition-shadow group"
               >
-                <h3 className="text-lg font-semibold text-navy-900">{job.title}</h3>
-                <div className="flex flex-wrap gap-4 mt-2 text-sm text-gray-600">
-                  <span>📂 {job.department}</span>
-                  <span>📍 {job.location}</span>
+                <div>
+                  <h3 className="text-lg font-semibold text-navy-900 group-hover:text-accent-500 transition-colors">
+                    {job.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-4 mt-1.5 text-sm text-gray-500">
+                    <span>{job.department}</span>
+                    <span>{job.location}</span>
+                  </div>
                 </div>
+                <svg
+                  className="w-5 h-5 text-gray-400 group-hover:text-accent-500 transition-colors shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
               </Link>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-12">
             <Link
               to="/careers/jobs"
-              className="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="inline-block bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-3.5 rounded transition-colors"
             >
               View All Positions
             </Link>

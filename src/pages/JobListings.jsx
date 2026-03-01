@@ -38,7 +38,7 @@ export default function JobListings() {
       <section className="bg-dark-900 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Job Listings</h1>
-          <p className="text-gray-300 text-lg">Explore open positions across BAE Systems worldwide.</p>
+          <p className="text-gray-300 text-lg">Explore open positions across BAE Systems across the United States.</p>
         </div>
       </section>
 

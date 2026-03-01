@@ -15,7 +15,7 @@ export default function Privacy() {
       <section className="max-w-4xl mx-auto px-4 py-16 prose prose-lg">
         <h2 className="text-2xl font-bold text-navy-900 mb-4">Introduction</h2>
         <p className="text-gray-600 mb-6">
-          BAE Systems plc ("we", "us", or "our") is committed to protecting the
+          BAE Systems, Inc. ("we", "us", or "our") is committed to protecting the
           privacy and security of your personal information. This Privacy Policy
           explains how we collect, use, disclose, and safeguard your information
           when you visit our website.
@@ -35,7 +35,7 @@ export default function Privacy() {
           How We Use Your Information
         </h2>
         <p className="text-gray-600 mb-6">
-          We use the information we collect to respond to your enquiries, process
+          We use the information we collect to respond to your inquiries, process
           job applications, send marketing communications (where you have opted
           in), improve our website and services, and comply with legal
           obligations.
@@ -57,15 +57,15 @@ export default function Privacy() {
         </h2>
         <p className="text-gray-600 mb-6">
           Our website may use cookies and similar tracking technologies to
-          enhance your browsing experience, analyse site traffic, and understand
+          enhance your browsing experience, analyze site traffic, and understand
           where our visitors are coming from. You can control cookies through
           your browser settings.
         </p>
 
         <h2 className="text-2xl font-bold text-navy-900 mb-4">Data Security</h2>
         <p className="text-gray-600 mb-6">
-          We implement appropriate technical and organisational measures to
-          protect your personal data against unauthorised access, alteration,
+          We implement appropriate technical and organizational measures to
+          protect your personal data against unauthorized access, alteration,
           disclosure, or destruction. However, no method of transmission over the
           Internet is 100% secure.
         </p>

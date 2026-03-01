@@ -2,67 +2,80 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import jobs from "../data/jobs";
 
-const stats = [
-  { value: "90,000+", label: "Employees Worldwide" },
-  { value: "40+", label: "Countries" },
-  { value: "$25.3B", label: "Annual Revenue" },
-  { value: "2,000+", label: "Active Projects" },
+const sectors = [
+  {
+    title: "Electronic Systems",
+    description:
+      "Flight and engine controls, electronic warfare, C4ISR, precision guidance, and power and energy management systems.",
+    gradient: "from-navy-800 to-navy-950",
+  },
+  {
+    title: "Intelligence & Security",
+    description:
+      "Systems engineering, integration, and sustainment solutions for U.S. military and government agencies.",
+    gradient: "from-navy-700 to-navy-900",
+  },
+  {
+    title: "Platforms & Services",
+    description:
+      "Combat vehicles, weapons, munitions, ship repair, ordnance, and technical services for the U.S. armed forces.",
+    gradient: "from-navy-800 to-navy-950",
+  },
+  {
+    title: "Space & Mission Systems",
+    description:
+      "Space electronics, payloads, sensors, and satellite systems supporting national security missions.",
+    gradient: "from-navy-700 to-navy-900",
+  },
 ];
 
-const domains = [
-  {
-    title: "Air",
-    description:
-      "Combat aircraft, avionics, and flight training systems for allied nations.",
-    gradient: "from-navy-800 to-navy-900",
-  },
-  {
-    title: "Land",
-    description:
-      "Armored vehicles, weapons systems, and munitions for ground forces.",
-    gradient: "from-navy-700 to-navy-800",
-  },
-  {
-    title: "Sea",
-    description:
-      "Submarines, surface ships, and naval combat systems worldwide.",
-    gradient: "from-navy-800 to-navy-900",
-  },
-  {
-    title: "Space",
-    description:
-      "Satellite systems, space electronics, and orbital defense capabilities.",
-    gradient: "from-navy-700 to-navy-800",
-  },
-  {
-    title: "Cyber",
-    description:
-      "Cybersecurity, intelligence, and information technology services.",
-    gradient: "from-navy-800 to-navy-900",
-  },
+const stats = [
+  { value: "35,000+", label: "Employees in the U.S." },
+  { value: "$15.8B", label: "U.S. Revenue" },
+  { value: "70+", label: "Years of Innovation" },
+  { value: "30+", label: "U.S. Locations" },
 ];
 
 const newsItems = [
   {
-    title: "BAE Systems Awarded Next-Gen Fighter Contract",
-    date: "June 15, 2025",
+    title: "BAE Systems Delivers Next-Generation Electronic Warfare System to U.S. Army",
+    date: "June 12, 2025",
     excerpt:
-      "A landmark agreement to develop sixth-generation combat aircraft in partnership with allied nations.",
-    category: "Defense",
+      "The advanced EW suite provides U.S. ground forces with superior situational awareness and spectrum dominance on the modern battlefield.",
+    category: "Electronic Systems",
   },
   {
-    title: "New Cyber Defense Center Opens in London",
-    date: "May 28, 2025",
+    title: "BAE Systems Awarded $2.7B Contract for Bradley Fighting Vehicle Upgrades",
+    date: "May 22, 2025",
     excerpt:
-      "State-of-the-art facility will bolster national cyber resilience and support allied intelligence operations.",
-    category: "Cyber",
+      "The modernization program will deliver enhanced lethality, survivability, and mobility for the U.S. Army's infantry fighting vehicle fleet.",
+    category: "Platforms & Services",
   },
   {
-    title: "Autonomous Naval Systems Trial Success",
-    date: "May 10, 2025",
+    title: "BAE Systems Expands Cybersecurity Operations Center in Northern Virginia",
+    date: "May 5, 2025",
     excerpt:
-      "Successful sea trials of unmanned surface vessel demonstrate future of maritime defense technology.",
-    category: "Naval",
+      "New facility strengthens the company's ability to protect critical U.S. government networks and support intelligence community missions.",
+    category: "Intelligence & Security",
+  },
+];
+
+const innovations = [
+  {
+    title: "Artificial Intelligence",
+    description: "Leveraging AI and machine learning to accelerate decision-making and enhance mission effectiveness for the U.S. warfighter.",
+  },
+  {
+    title: "Autonomous Systems",
+    description: "Developing unmanned and autonomous platforms across air, land, sea, and space domains for the U.S. Department of Defense.",
+  },
+  {
+    title: "Advanced Manufacturing",
+    description: "Investing in digital engineering, additive manufacturing, and next-generation production methods at U.S. facilities nationwide.",
+  },
+  {
+    title: "Digital Transformation",
+    description: "Modernizing enterprise IT, cloud infrastructure, and data analytics to support U.S. national security objectives.",
   },
 ];
 
@@ -75,100 +88,105 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center bg-dark-900 text-white overflow-hidden">
-        {/* Background pattern overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(237,26,59,0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(59,130,246,0.2) 0%, transparent 50%)',
-          }} />
+        {/* Hero background image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://www.baesystems.com/.imaging/focalpoint/Banner/2200x660/dam/jcr:42cfcf49-d2c9-40d2-a9c8-22c42e149ebe/BAE8-8-2020_13.jpeg"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-dark-900/60" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-8 py-20 w-full">
+        <div className="relative max-w-7xl mx-auto px-4 lg:px-8 py-24 w-full">
           <div className="max-w-3xl">
-            <div className="inline-block bg-accent-500/20 border border-accent-500/40 rounded-full px-4 py-1.5 text-sm font-medium text-accent-400 mb-6">
-              Defense • Aerospace • Security
-            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6">
-              Advancing the Future of
-              <span className="text-accent-400"> Defense</span> &amp;{" "}
-              <span className="text-accent-400">Aerospace</span>
+              We Protect Those Who Protect Us
+              <span className="text-accent-400">®</span>
             </h1>
             <p className="max-w-2xl text-lg text-gray-300 mb-10 leading-relaxed">
-              We protect those who protect us — delivering the technology and
-              solutions that keep nations safe and secure around the world.
+              BAE Systems, Inc. delivers advanced defense, intelligence, and
+              security solutions to the United States government and military —
+              safeguarding national security with proven technology and
+              unwavering commitment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/careers"
+                to="/businesses"
                 className="inline-flex items-center justify-center px-8 py-3.5 rounded bg-accent-500 hover:bg-accent-600 text-white font-semibold transition-colors text-base"
               >
-                Explore Careers
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
+                Explore Our Capabilities
+                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
               <Link
-                to="/about"
+                to="/careers"
                 className="inline-flex items-center justify-center px-8 py-3.5 rounded border border-white/30 hover:bg-white/10 text-white font-semibold transition-colors text-base"
               >
-                Learn More
+                Join Our Team
               </Link>
             </div>
           </div>
         </div>
-        {/* Bottom red accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent-500" />
       </section>
 
-      {/* Mission Statement */}
-      <section className="py-16 px-4 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="w-12 h-1 bg-accent-500 mx-auto mb-6" />
-          <p className="text-xl lg:text-2xl leading-relaxed text-navy-800 font-medium">
-            Our mission is to provide advanced defense, aerospace, and security
-            solutions that protect and strengthen the nations we serve.
-          </p>
+      {/* Business Sectors */}
+      <section className="py-20 px-4 lg:px-8 bg-steel-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-navy-900 mb-3">
+              Our Business Sectors
+            </h2>
+            <p className="text-steel-500 max-w-2xl mx-auto">
+              BAE Systems, Inc. operates across four sectors that deliver
+              critical capabilities to the U.S. Department of Defense and
+              federal agencies.
+            </p>
+            <div className="w-12 h-1 bg-accent-500 mx-auto mt-6" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {sectors.map((sector) => (
+              <Link
+                key={sector.title}
+                to="/businesses"
+                className={`group relative bg-gradient-to-br ${sector.gradient} rounded-lg p-6 min-h-[240px] flex flex-col justify-end overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl`}
+              >
+                <div className="absolute top-0 left-0 w-full h-1 bg-accent-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <h3 className="text-xl font-heading font-bold text-white mb-2">
+                  {sector.title}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
+                  {sector.description}
+                </p>
+                <span className="inline-flex items-center text-accent-400 text-sm font-medium mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  Learn More
+                  <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Key Statistics */}
       <section className="bg-navy-900 py-16 px-4 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {stats.map((stat) => (
-            <div key={stat.label} className="group">
-              <p className="text-3xl sm:text-4xl font-heading font-bold text-white group-hover:text-accent-400 transition-colors">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-gray-400 text-sm uppercase tracking-wide">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Domain Tiles - BAE Systems style */}
-      <section className="py-20 px-4 lg:px-8 bg-steel-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-navy-900 mb-3">
-              Our Domains
-            </h2>
-            <div className="w-12 h-1 bg-accent-500 mx-auto mt-4" />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {domains.map((domain) => (
-              <Link
-                key={domain.title}
-                to="/businesses"
-                className={`group relative bg-gradient-to-br ${domain.gradient} rounded-lg p-6 min-h-[200px] flex flex-col justify-end overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl`}
-              >
-                <div className="absolute top-0 left-0 w-full h-1 bg-accent-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <h3 className="text-xl font-heading font-bold text-white mb-2">
-                  {domain.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
-                  {domain.description}
+          <h2 className="text-center text-2xl font-heading font-bold text-white mb-10">
+            BAE Systems, Inc. at a Glance
+          </h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            {stats.map((stat) => (
+              <div key={stat.label} className="group">
+                <p className="text-3xl sm:text-4xl font-heading font-bold text-white group-hover:text-accent-400 transition-colors">
+                  {stat.value}
                 </p>
-                <span className="inline-flex items-center text-accent-400 text-sm font-medium mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  Explore
-                  <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
-                </span>
-              </Link>
+                <p className="mt-2 text-gray-400 text-sm uppercase tracking-wide">
+                  {stat.label}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -184,9 +202,14 @@ export default function Home() {
               </h2>
               <div className="w-12 h-1 bg-accent-500 mt-3" />
             </div>
-            <Link to="/news" className="hidden sm:inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold text-sm transition-colors">
-              View All News
-              <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
+            <Link
+              to="/news"
+              className="hidden sm:inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold text-sm transition-colors"
+            >
+              Visit Newsroom
+              <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -195,7 +218,6 @@ export default function Home() {
                 key={item.title}
                 className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300"
               >
-                {/* Colored accent bar at top of card */}
                 <div className="h-1 bg-accent-500" />
                 <div className="p-6">
                   <span className="inline-block text-xs font-semibold text-accent-500 uppercase tracking-wide mb-2">
@@ -213,9 +235,43 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-8 sm:hidden">
-            <Link to="/news" className="text-accent-500 hover:text-accent-600 font-semibold text-sm">
-              View All News →
+            <Link
+              to="/news"
+              className="text-accent-500 hover:text-accent-600 font-semibold text-sm"
+            >
+              Visit Newsroom →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovation & Technology */}
+      <section className="py-20 px-4 lg:px-8 bg-steel-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-navy-900 mb-3">
+              Innovation &amp; Technology
+            </h2>
+            <p className="text-steel-500 max-w-2xl mx-auto">
+              We invest in breakthrough technologies that give the United States
+              a decisive advantage on the battlefield and beyond.
+            </p>
+            <div className="w-12 h-1 bg-accent-500 mx-auto mt-6" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {innovations.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300"
+              >
+                <h3 className="text-lg font-heading font-semibold text-navy-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -228,9 +284,9 @@ export default function Home() {
             Join Our Team
           </h2>
           <p className="text-gray-400 mb-10 max-w-2xl mx-auto text-lg">
-            Build a career that matters. We offer opportunities across
-            engineering, technology, and business — shaping the future of
-            defense and security.
+            Build a career that strengthens national security. We offer
+            opportunities across engineering, technology, and operations at
+            locations throughout the United States.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
             {featuredJobs.map((job) => (
@@ -248,19 +304,22 @@ export default function Home() {
             className="inline-flex items-center px-8 py-3.5 rounded bg-accent-500 hover:bg-accent-600 text-white font-semibold transition-colors"
           >
             View All Positions
-            <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
+            <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </Link>
         </div>
       </section>
 
-      {/* Newsletter CTA */}
+      {/* Newsletter Subscription */}
       <section className="py-16 px-4 lg:px-8 bg-white">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-2xl font-heading font-bold text-navy-900 mb-3">
             Stay Informed
           </h2>
           <p className="text-gray-600 mb-6">
-            Subscribe to receive the latest updates from BAE Systems.
+            Subscribe to receive the latest news and updates from BAE Systems
+            in the United States.
           </p>
           <form
             onSubmit={(e) => e.preventDefault()}

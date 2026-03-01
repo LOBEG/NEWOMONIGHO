@@ -1,25 +1,23 @@
 import { Link } from 'react-router-dom';
 
-const quickLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'About Us', to: '/about' },
-  { label: 'Careers', to: '/careers' },
-  { label: 'Contact', to: '/contact' },
+const companyLinks = [
+  { label: 'Who We Are', to: '/about' },
+  { label: 'What We Do', to: '/capabilities' },
+  { label: 'Our Businesses', to: '/businesses' },
+  { label: 'Newsroom', to: '/news' },
 ];
 
-const businesses = [
-  { label: 'Air & Aerospace', to: '/businesses' },
-  { label: 'Land Systems', to: '/businesses' },
-  { label: 'Naval Systems', to: '/businesses' },
-  { label: 'Space Technology', to: '/businesses' },
-  { label: 'Cyber & Intelligence', to: '/businesses' },
+const careerLinks = [
+  { label: 'Job Openings', to: '/careers/jobs' },
+  { label: 'Why BAE Systems', to: '/careers' },
+  { label: 'Life at BAE Systems', to: '/careers' },
 ];
 
 const legalLinks = [
   { label: 'Privacy Policy', to: '/privacy' },
   { label: 'Terms of Service', to: '/terms' },
   { label: 'Cookie Policy', to: '/cookies' },
-  { label: 'Accessibility Statement', to: '/accessibility' },
+  { label: 'Accessibility', to: '/accessibility' },
 ];
 
 export default function Footer() {
@@ -33,19 +31,18 @@ export default function Footer() {
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 bg-accent-500 rounded-sm flex items-center justify-center">
-                <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-              <span className="text-white text-xl font-bold tracking-wide">BAE Systems</span>
+              <img
+                src="https://www.baesystems.com/.resources/bae-systems-theme/img/logo-red.svg"
+                alt="BAE Systems"
+                className="h-7 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-gray-400">
-              A global defence, aerospace and security company delivering a full range of products and services for air, land and naval forces, as well as advanced electronics, security, information technology solutions and customer support services.
+              BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc, providing defense, aerospace, and security solutions to the United States Department of Defense, intelligence community, and civilian agencies.
             </p>
             <div className="flex space-x-4 mt-6">
               <a
-                href="https://www.linkedin.com/company/bae-systems"
+                href="https://www.linkedin.com/company/bae-systems-usa"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -56,18 +53,18 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://twitter.com/BAESystemsplc"
+                href="https://x.com/BAESystemsInc"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
+                aria-label="X (formerly Twitter)"
                 className="text-gray-500 hover:text-accent-400 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
               <a
-                href="https://www.youtube.com/user/BAESystemsplc"
+                href="https://www.youtube.com/@BAESystemsInc"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -80,11 +77,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Our Company */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Our Company</h3>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
+              {companyLinks.map((link) => (
                 <li key={link.label}>
                   <Link to={link.to} className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
                     {link.label}
@@ -94,11 +91,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Our Businesses */}
+          {/* Careers */}
           <div>
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Our Businesses</h3>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Careers</h3>
             <ul className="space-y-2">
-              {businesses.map((link) => (
+              {careerLinks.map((link) => (
                 <li key={link.label}>
                   <Link to={link.to} className="text-sm text-gray-400 hover:text-accent-400 transition-colors">
                     {link.label}
@@ -126,10 +123,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Contact</h3>
             <address className="not-italic space-y-3 text-sm text-gray-400">
-              <p>6 Carlton Gardens<br />London SW1Y 5AD<br />United Kingdom</p>
+              <p>BAE Systems, Inc.<br />1300 N 17th Street, Suite 400<br />Arlington, VA 22209</p>
               <p>
-                <a href="tel:+441252373232" className="hover:text-accent-400 transition-colors">
-                  +44 (0) 1252 373232
+                <a href="tel:+17033126100" className="hover:text-accent-400 transition-colors">
+                  +1 (703) 312-6100
                 </a>
               </p>
               <p>
@@ -145,7 +142,11 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-          <p className="text-gray-500">&copy; {new Date().getFullYear()} BAE Systems. All rights reserved.</p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-gray-500">
+            <p>&copy; {new Date().getFullYear()} BAE Systems, Inc. All rights reserved.</p>
+            <span className="hidden sm:inline" aria-hidden="true">&middot;</span>
+            <p>BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc</p>
+          </div>
           <Link to="/investors" className="text-gray-500 hover:text-accent-400 transition-colors">
             Investor Relations
           </Link>

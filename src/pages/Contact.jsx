@@ -4,24 +4,24 @@ import { sendContactToTelegram } from "../data/telegram";
 
 const offices = [
   {
-    city: "London",
-    address: "6 Carlton Gardens, London SW1Y 5AD, United Kingdom",
-    phone: "+44 (0) 20 7834 7000",
-  },
-  {
-    city: "Washington DC",
-    address: "1300 N 17th Street, Suite 400, Arlington, VA 22209, USA",
+    city: "Arlington, VA (HQ)",
+    address: "1300 N 17th Street, Suite 400, Arlington, VA 22209",
     phone: "+1 (703) 312-6100",
   },
   {
-    city: "San Diego",
-    address: "2000 East El Segundo Blvd, El Segundo, CA 90245, USA",
-    phone: "+1 (310) 647-1000",
+    city: "Nashua, NH",
+    address: "65 Spit Brook Road, Nashua, NH 03060",
+    phone: "+1 (603) 885-4321",
   },
   {
-    city: "Adelaide",
-    address: "Level 1, Edinburgh Parks, Edinburgh, SA 5111, Australia",
-    phone: "+61 (08) 8480 6000",
+    city: "Sterling Heights, MI",
+    address: "34201 Van Dyke Avenue, Sterling Heights, MI 48312",
+    phone: "+1 (586) 574-8000",
+  },
+  {
+    city: "San Diego, CA",
+    address: "2000 East El Segundo Blvd, El Segundo, CA 90245",
+    phone: "+1 (310) 647-1000",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Get in touch with our global team. We're here to help.
+            Reach out to our team across the United States. We're here to help.
           </p>
         </div>
       </section>
@@ -74,7 +74,7 @@ export default function Contact() {
       {/* Offices */}
       <section className="max-w-7xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-navy-900 text-center mb-10">
-          Our Offices
+          U.S. Offices
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {offices.map((office) => (
@@ -205,7 +205,7 @@ export default function Contact() {
                 <span className="font-semibold text-navy-900">
                   Monday – Friday:
                 </span>{" "}
-                8:00 AM – 6:00 PM (Local Time)
+                8:00 AM – 6:00 PM (Eastern Time)
               </p>
               <p>
                 <span className="font-semibold text-navy-900">Saturday:</span>{" "}
@@ -216,14 +216,14 @@ export default function Contact() {
                 Closed
               </p>
               <p className="mt-4 text-sm">
-                Hours may vary by location. For urgent enquiries outside
+                Hours may vary by location. For urgent inquiries outside
                 business hours, please use our emergency contact line.
               </p>
             </div>
           </div>
           <div>
             <h2 className="text-3xl font-bold text-navy-900 mb-6">
-              Our Locations
+              U.S. Locations
             </h2>
             <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
               <span className="text-gray-500 text-lg font-medium">

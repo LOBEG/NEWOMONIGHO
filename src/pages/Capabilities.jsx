@@ -1,107 +1,102 @@
 import { Link } from "react-router-dom";
 
-const technicalCapabilities = [
+const domains = [
   {
-    icon: "⚙️",
-    title: "Engineering",
+    title: "Air",
+    image:
+      "https://www.baesystems.com/.imaging/focalpoint/Square/640x600/dam/jcr:9b12516f-d142-42dd-90f0-419282572be4/F35+at+Marham.jpg",
     description:
-      "World-class engineering teams designing next-generation defense and aerospace systems with precision and innovation.",
+      "From fighter aircraft and advanced avionics to unmanned aerial systems, we deliver the technologies that ensure air superiority for the U.S. and its allies.",
   },
   {
-    icon: "🏭",
-    title: "Manufacturing",
+    title: "Land",
+    image:
+      "https://www.baesystems.com/.imaging/focalpoint/Square/640x600/dam/jcr:cef038a9-c60d-4d15-b97a-5eca4a96b634/AMPV_C-UAS+Prototype-Image+2.JPG",
     description:
-      "State-of-the-art manufacturing facilities producing complex platforms and subsystems at scale with unmatched quality.",
+      "We design and build armored combat vehicles, weapons systems, and munitions that protect ground forces and deliver decisive lethality on the modern battlefield.",
   },
   {
-    icon: "🔬",
-    title: "Research & Development",
+    title: "Sea",
+    image:
+      "https://www.baesystems.com/.imaging/focalpoint/Square/640x600/dam/jcr:1f1138b5-e5e1-4421-a7c2-f1bc346cbf72/HMAS+Ballarat.jpg",
     description:
-      "Pioneering R&D programs that push the boundaries of science and technology to solve the most challenging problems.",
+      "Our naval capabilities span ship repair, modernization, and advanced maritime systems that keep the U.S. Navy and allied fleets mission-ready worldwide.",
   },
   {
-    icon: "🔗",
-    title: "Systems Integration",
+    title: "Space",
+    image:
+      "https://www.baesystems.com/.imaging/focalpoint/Square/640x600/dam/jcr:b40356fd-61a0-4af3-bed2-7a4a7f9c3a0c/RS193611_24-22258-SPHEREx_FamilyPhotos-Enhanced-NR-Edit_lpr.jpg",
     description:
-      "Seamlessly integrating hardware, software, and services into cohesive mission-critical systems for our customers.",
-  },
-];
-
-const industries = [
-  {
-    title: "Government & Defense",
-    description:
-      "Partnering with governments worldwide to deliver advanced defense solutions that ensure national security and mission success.",
-    offerings: [
-      "Electronic warfare systems",
-      "Intelligence & surveillance",
-      "Command & control platforms",
-      "Secure communications",
-    ],
+      "We engineer satellite electronics, radiation-hardened processors, and advanced space sensors that ensure U.S. superiority across the space domain.",
   },
   {
-    title: "Military",
+    title: "Cyber",
+    image:
+      "https://www.baesystems.com/.imaging/focalpoint/Square/640x600/dam/jcr:6dd86369-7949-4741-8b34-a571434e5c8f/Provide+Intelligence+Analysis+for+DIA+Image.jpg",
     description:
-      "Equipping military forces with cutting-edge platforms and technologies that provide decisive advantages on the battlefield.",
-    offerings: [
-      "Combat vehicles & weapons",
-      "Fighter aircraft & UAVs",
-      "Naval vessels & submarines",
-      "Soldier modernization",
-    ],
+      "Our cybersecurity, signals intelligence, and data analytics solutions protect critical networks and inform national security decision-making.",
   },
   {
-    title: "Commercial",
+    title: "All Capabilities",
+    image:
+      "https://www.baesystems.com/.imaging/focalpoint/Square/640x600/dam/jcr:b5cb796f-8253-4691-ab80-56a9d802ccfc/Mantlet+Edge+%281%29.jpg",
     description:
-      "Applying defense-grade technology and expertise to commercial markets, delivering solutions for aviation, cybersecurity, and beyond.",
-    offerings: [
-      "Commercial avionics",
-      "Cybersecurity services",
-      "Airport security systems",
-      "Space & satellite solutions",
-    ],
+      "Explore the full range of BAE Systems, Inc. technologies and solutions that support every domain of the U.S. defense and national security mission.",
   },
 ];
 
-const innovations = [
+const customers = [
   {
-    icon: "🤖",
-    title: "AI & Machine Learning",
+    title: "U.S. Department of Defense",
     description:
-      "Leveraging artificial intelligence to enhance decision-making, automate complex processes, and unlock new operational capabilities.",
+      "Equipping the Army, Navy, Air Force, Marine Corps, and Space Force with advanced platforms, electronics, and sustainment services.",
+    offerings: [
+      "Armored combat vehicles and artillery systems",
+      "Electronic warfare and countermeasure suites",
+      "Precision munitions and weapon systems",
+      "Ship repair, modernization, and lifecycle support",
+    ],
   },
   {
-    icon: "🛩️",
-    title: "Autonomous Systems",
+    title: "U.S. Intelligence Community",
     description:
-      "Developing unmanned and autonomous platforms across air, land, and sea domains for safer, more effective missions.",
+      "Supporting intelligence agencies with advanced tools for signals intelligence, data exploitation, and secure information sharing.",
+    offerings: [
+      "SIGINT collection and processing systems",
+      "Geospatial intelligence and analytics",
+      "Secure cloud and data management platforms",
+      "Counter-threat and counterintelligence solutions",
+    ],
   },
   {
-    icon: "⚛️",
-    title: "Quantum Computing",
+    title: "Federal Civilian Agencies",
     description:
-      "Investing in quantum technologies to solve previously intractable problems in cryptography, optimization, and simulation.",
+      "Delivering IT modernization, cybersecurity, and mission support services to federal agencies across the U.S. government.",
+    offerings: [
+      "Enterprise cybersecurity and risk management",
+      "IT infrastructure modernization",
+      "Identity and access management",
+      "Cloud migration and managed services",
+    ],
   },
-  {
-    icon: "🧬",
-    title: "Advanced Materials",
-    description:
-      "Engineering next-generation materials that are lighter, stronger, and more resilient for demanding defense applications.",
-  },
-];
-
-const techStack = [
-  "Cloud Computing",
-  "Cybersecurity",
-  "Data Analytics",
-  "IoT",
-  "Digital Twin Technology",
 ];
 
 const qualityItems = [
-  "ISO 9001, ISO 27001, and AS9100 certified processes",
-  "Rigorous testing and validation at every stage of development",
-  "Continuous improvement culture driven by data and feedback",
+  {
+    label: "ITAR Compliant",
+    detail:
+      "Full compliance with International Traffic in Arms Regulations, safeguarding controlled defense technologies and data.",
+  },
+  {
+    label: "ISO 9001 & AS9100 Certified",
+    detail:
+      "Quality management systems certified to the highest international standards for aerospace and defense manufacturing.",
+  },
+  {
+    label: "CMMI Level 5",
+    detail:
+      "Achieving the highest level of process maturity for continuous improvement, optimized performance, and engineering excellence.",
+  },
 ];
 
 export default function Capabilities() {
@@ -111,55 +106,63 @@ export default function Capabilities() {
       <section className="bg-dark-900 text-white py-20 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">What We Do</h1>
-          <p className="max-w-2xl mx-auto text-lg text-navy-200">
-            From advanced engineering to cutting-edge research, BAE Systems
-            delivers the capabilities that keep nations safe and drive
-            technological progress across defense, aerospace, and security.
+          <p className="max-w-3xl mx-auto text-lg text-navy-200">
+            BAE Systems, Inc. delivers advanced defense, intelligence, and
+            security solutions to the U.S. military, the intelligence community,
+            and allied nations. We provide the technology and mission support
+            that protect American forces and strengthen national security —
+            across air, land, sea, space, and cyber.
           </p>
         </div>
       </section>
 
-      {/* Technical Capabilities */}
+      {/* Domain Grid — Air, Land, Sea, Space, Cyber, All Capabilities */}
       <section className="py-20 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-12">
-            Technical Capabilities
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technicalCapabilities.map((cap) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {domains.map((d) => (
               <div
-                key={cap.title}
-                className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow"
+                key={d.title}
+                className="group relative overflow-hidden rounded-lg"
               >
-                <span className="text-4xl block mb-4">{cap.icon}</span>
-                <h3 className="text-xl font-semibold text-navy-900 mb-2">
-                  {cap.title}
-                </h3>
-                <p className="text-steel-700">{cap.description}</p>
+                <img
+                  src={d.image}
+                  alt={d.title}
+                  className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {d.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {d.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Solutions by Industry */}
+      {/* Solutions by Customer */}
       <section className="py-20 px-4 lg:px-8 bg-navy-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-navy-900 text-center mb-12">
-            Solutions by Industry
+            Solutions by Customer
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {industries.map((ind) => (
+            {customers.map((cust) => (
               <div
-                key={ind.title}
+                key={cust.title}
                 className="bg-white rounded-xl shadow-md p-8"
               >
                 <h3 className="text-xl font-semibold text-navy-900 mb-3">
-                  {ind.title}
+                  {cust.title}
                 </h3>
-                <p className="text-steel-700 mb-4">{ind.description}</p>
+                <p className="text-steel-700 mb-4">{cust.description}</p>
                 <ul className="space-y-2">
-                  {ind.offerings.map((item) => (
+                  {cust.offerings.map((item) => (
                     <li
                       key={item}
                       className="flex items-start gap-2 text-steel-700"
@@ -175,87 +178,48 @@ export default function Capabilities() {
         </div>
       </section>
 
-      {/* Innovation Hub */}
+      {/* Quality & Compliance */}
       <section className="py-20 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
-            Innovation Hub
+            Quality &amp; Compliance
           </h2>
-          <p className="max-w-2xl mx-auto text-center text-steel-700 mb-12">
-            We invest in emerging technologies that will define the future of
-            defense and security, turning breakthrough ideas into operational
-            advantage.
+          <p className="max-w-2xl mx-auto text-center text-steel-700 mb-10">
+            Our commitment to quality and regulatory compliance ensures every
+            product and service meets the stringent requirements of U.S. defense
+            and national security programs.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {innovations.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow"
-              >
-                <span className="text-4xl block mb-4">{item.icon}</span>
-                <h3 className="text-xl font-semibold text-navy-900 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-steel-700">{item.description}</p>
+          <div className="max-w-3xl mx-auto space-y-6">
+            {qualityItems.map((item) => (
+              <div key={item.label} className="flex items-start gap-3">
+                <span className="text-accent-500 text-xl leading-none mt-1">
+                  ✓
+                </span>
+                <div>
+                  <span className="font-semibold text-navy-900">
+                    {item.label}
+                  </span>
+                  <p className="text-steel-700 mt-1">{item.detail}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technology Stack */}
-      <section className="py-20 px-4 lg:px-8 bg-steel-50">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-navy-900 mb-12">
-            Technology Stack
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-6 py-3 bg-navy-900 text-white rounded-full text-sm font-medium"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quality Assurance */}
-      <section className="py-20 px-4 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
-            Quality Assurance
-          </h2>
-          <p className="max-w-2xl mx-auto text-center text-steel-700 mb-10">
-            Quality is embedded in everything we do. Our rigorous standards
-            ensure every product and service meets the highest benchmarks of
-            reliability and performance.
-          </p>
-          <ul className="max-w-2xl mx-auto space-y-4">
-            {qualityItems.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-steel-700">
-                <span className="text-accent-500 text-xl leading-none">✓</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Supply Chain */}
+      {/* U.S. Supply Chain */}
       <section className="py-20 px-4 lg:px-8 bg-navy-50">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-navy-900 mb-4">
-            Global Supply Chain
+            U.S. Supply Chain
           </h2>
           <p className="text-steel-700">
-            Our global manufacturing footprint and robust logistics network
-            ensure we deliver complex programs on time and on budget. We work
-            with thousands of suppliers across 40+ countries, maintaining the
-            highest standards of quality and security throughout the supply
-            chain.
+            BAE Systems, Inc. partners with thousands of suppliers across the
+            United States, strengthening the American industrial base and
+            ensuring resilient, secure supply chains for critical defense
+            programs. We are committed to fostering small business participation
+            and investing in domestic manufacturing to keep vital capabilities
+            on U.S. soil.
           </p>
         </div>
       </section>
@@ -267,8 +231,8 @@ export default function Capabilities() {
             Ready to Make an Impact?
           </h2>
           <p className="max-w-xl mx-auto text-navy-200 mb-8">
-            Join a team that builds the technology shaping the future of defense
-            and security worldwide.
+            Join a team that builds the technology defending the United States
+            and shaping the future of national security.
           </p>
           <Link
             to="/careers"

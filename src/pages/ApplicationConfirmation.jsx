@@ -175,7 +175,7 @@ export default function ApplicationConfirmation() {
                 careers@baesystems.com
               </a>
             </li>
-            <li>📞 Phone: +44 (0) 1252 234 5678</li>
+            <li>📞 Phone: +1 (703) 312-6100</li>
             <li>
               🔖 Please reference:{" "}
               <span className="font-mono font-semibold">{refNumber}</span>

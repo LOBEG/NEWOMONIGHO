@@ -95,7 +95,7 @@ export default function JobDetail() {
             <div>
               <h2 className="text-2xl font-bold text-navy-900 mb-3">About the Department</h2>
               <p className="text-gray-700 leading-relaxed">
-                The {job.department} division is at the forefront of innovation, delivering mission-critical solutions that protect and empower communities around the globe. Our teams collaborate across disciplines to solve the most complex challenges in defence and security.
+                The {job.department} division is at the forefront of innovation, delivering mission-critical solutions that protect and empower communities around the globe. Our teams collaborate across disciplines to solve the most complex challenges in defense and security.
               </p>
             </div>
 
@@ -103,11 +103,11 @@ export default function JobDetail() {
             <div>
               <h2 className="text-2xl font-bold text-navy-900 mb-3">Benefits</h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
-                <li className="flex items-center gap-2"><span>🏥</span> Comprehensive Health Insurance</li>
-                <li className="flex items-center gap-2"><span>💰</span> Employer-Matched Pension / 401k</li>
-                <li className="flex items-center gap-2"><span>📚</span> Professional Development Funding</li>
+                <li className="flex items-center gap-2"><span>🏥</span> Comprehensive Health, Dental & Vision</li>
+                <li className="flex items-center gap-2"><span>💰</span> 401(k) with Company Match</li>
+                <li className="flex items-center gap-2"><span>📚</span> Tuition Reimbursement</li>
                 <li className="flex items-center gap-2"><span>🌴</span> Generous Paid Time Off</li>
-                <li className="flex items-center gap-2"><span>🏠</span> Flexible & Remote Working</li>
+                <li className="flex items-center gap-2"><span>🏠</span> Flexible & Hybrid Work Options</li>
                 <li className="flex items-center gap-2"><span>✈️</span> Relocation Assistance</li>
               </ul>
             </div>
@@ -162,7 +162,7 @@ export default function JobDetail() {
                 )}
                 <div>
                   <p className="text-gray-500">Posted</p>
-                  <p className="font-medium text-navy-900">{new Date(job.postedDate).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</p>
+                  <p className="font-medium text-navy-900">{new Date(job.postedDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</p>
                 </div>
               </div>
             </div>

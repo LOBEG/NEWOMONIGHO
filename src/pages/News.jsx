@@ -1,50 +1,56 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const categories = ["All", "Innovation", "Partnerships", "Expansions", "Awards"];
+const categories = ["All", "Defense", "Technology", "Awards", "Community"];
 
 const articles = [
   {
-    category: "Innovation",
-    title: "BAE Systems Unveils Next-Generation Electronic Warfare Suite",
-    date: "December 15, 2024",
+    category: "Defense",
+    title: "BAE Systems Awarded $3.6 Billion AMPV Full-Rate Production Contract",
+    date: "March 12, 2025",
+    location: "Sterling Heights, MI",
     excerpt:
-      "A breakthrough in electronic warfare technology promises to redefine how allied forces detect and counter emerging threats across the electromagnetic spectrum.",
+      "The U.S. Army has awarded BAE Systems a $3.6 billion contract for full-rate production of the Armored Multi-Purpose Vehicle (AMPV), replacing the legacy M113 fleet with a modern, survivable platform for American soldiers.",
   },
   {
-    category: "Partnerships",
-    title: "Strategic Alliance Formed with Leading AI Research Lab",
-    date: "November 28, 2024",
+    category: "Technology",
+    title: "Next-Generation Electronic Warfare System Completes Successful Flight Test",
+    date: "January 28, 2025",
+    location: "Nashua, NH",
     excerpt:
-      "BAE Systems partners with a world-renowned artificial intelligence research institute to accelerate autonomous defence capabilities.",
+      "BAE Systems' next-generation electronic warfare system has completed a successful series of flight tests, demonstrating advanced threat detection and countermeasure capabilities for the U.S. military.",
   },
   {
-    category: "Expansions",
-    title: "New Advanced Manufacturing Facility Opens in Alabama",
-    date: "November 10, 2024",
+    category: "Community",
+    title: "BAE Systems Invests $100 Million in New Advanced Manufacturing Facility in Alabama",
+    date: "November 15, 2024",
+    location: "Huntsville, AL",
     excerpt:
-      "A state-of-the-art manufacturing centre will create over 500 jobs and bolster production of next-generation combat vehicles.",
+      "BAE Systems, Inc. announces a $100 million investment in a new state-of-the-art manufacturing facility in Huntsville, Alabama, creating over 500 American jobs and strengthening the U.S. defense industrial base.",
   },
   {
     category: "Awards",
-    title: "BAE Systems Recognised as Top Defence Employer",
-    date: "October 22, 2024",
+    title: "BAE Systems Named Top 10 U.S. Defense Contractor for 2025",
+    date: "October 8, 2024",
+    location: null,
     excerpt:
-      "The company receives a prestigious industry award for its commitment to workforce development and employee well-being.",
+      "BAE Systems, Inc. has been recognized as one of the top 10 defense contractors in the United States, reflecting the company's continued growth and commitment to supporting the nation's security priorities.",
   },
   {
-    category: "Innovation",
-    title: "Quantum Computing Programme Achieves Key Milestone",
-    date: "October 5, 2024",
+    category: "Technology",
+    title: "AI-Powered Threat Detection System Deployed Across DoD Networks",
+    date: "September 20, 2024",
+    location: "Arlington, VA",
     excerpt:
-      "Researchers within BAE Systems' Applied Intelligence division demonstrate a quantum advantage in cryptographic analysis.",
+      "BAE Systems has deployed its AI-powered cyber threat detection system across Department of Defense networks, providing real-time protection against sophisticated adversarial attacks on U.S. critical infrastructure.",
   },
   {
-    category: "Partnerships",
-    title: "Multi-Nation Collaboration on Future Combat Air System",
-    date: "September 18, 2024",
+    category: "Defense",
+    title: "BAE Systems Delivers 1,000th Bradley Fighting Vehicle Upgrade",
+    date: "August 5, 2024",
+    location: "Sterling Heights, MI",
     excerpt:
-      "BAE Systems joins a landmark international consortium to design and build a sixth-generation fighter aircraft for allied air forces.",
+      "BAE Systems has delivered the 1,000th upgraded Bradley Fighting Vehicle to the U.S. Army, a major milestone in the program that enhances lethality, survivability, and readiness for American ground forces.",
   },
 ];
 
@@ -61,12 +67,10 @@ export default function News() {
       {/* Hero */}
       <section className="bg-dark-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            News &amp; Press Center
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Newsroom</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            The latest announcements, press releases, and media resources from
-            BAE Systems.
+            The latest news, press releases, and updates from BAE Systems, Inc.
+            across the United States.
           </p>
         </div>
       </section>
@@ -103,7 +107,10 @@ export default function News() {
                 <h3 className="text-lg font-bold text-navy-900 mb-2">
                   {article.title}
                 </h3>
-                <p className="text-sm text-gray-500 mb-3">{article.date}</p>
+                <p className="text-sm text-gray-500 mb-3">
+                  {article.date}
+                  {article.location && ` — ${article.location}`}
+                </p>
                 <p className="text-gray-600 mb-4">{article.excerpt}</p>
                 <Link
                   to="#"
@@ -122,9 +129,9 @@ export default function News() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-navy-900 mb-4">Press Kit</h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Download our media resources including logos, executive bios, and
-            fact sheets. For media enquiries, reach out to our communications
-            team.
+            Download our U.S. media resources including logos, executive
+            biographies, and corporate fact sheets. For media inquiries, please
+            contact our communications team.
           </p>
           <a
             href="#"

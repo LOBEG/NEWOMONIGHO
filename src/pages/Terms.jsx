@@ -28,7 +28,7 @@ export default function Terms() {
         <p className="text-gray-600 mb-6">
           You may use our website for lawful purposes only. You agree not to use
           the site in any way that could damage, disable, or impair the website
-          or interfere with any other party's use. Unauthorised access or
+          or interfere with any other party's use. Unauthorized access or
           attempted access to any part of the website is strictly prohibited.
         </p>
 
@@ -37,7 +37,7 @@ export default function Terms() {
         </h2>
         <p className="text-gray-600 mb-6">
           All content on this website, including text, graphics, logos, and
-          software, is the property of BAE Systems plc or its licensors and is
+          software, is the property of BAE Systems, Inc. or its licensors and is
           protected by applicable intellectual property laws. You may not
           reproduce, distribute, or create derivative works without our prior
           written consent.
@@ -78,9 +78,9 @@ export default function Terms() {
         </h2>
         <p className="text-gray-600 mb-6">
           These Terms of Service are governed by and construed in accordance with
-          the laws of England and Wales. Any disputes arising from or relating to
+          the laws of the Commonwealth of Virginia, United States. Any disputes arising from or relating to
           these terms shall be subject to the exclusive jurisdiction of the
-          courts of England and Wales.
+          federal and state courts located in the Commonwealth of Virginia.
         </p>
 
         <h2 className="text-2xl font-bold text-navy-900 mb-4">Contact Us</h2>

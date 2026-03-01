@@ -3,52 +3,57 @@ import { Link } from "react-router-dom";
 
 const reports = [
   {
-    title: "Annual Report 2023",
+    title: "2024 Annual Report",
     description:
-      "Comprehensive overview of BAE Systems' financial performance, strategic initiatives, and outlook for the coming year.",
+      "Full-year financial results, strategic highlights, and forward outlook for BAE Systems plc, including U.S. operations performance.",
     type: "Annual Report",
   },
   {
-    title: "Q4 2023 Earnings",
+    title: "FY2024 Earnings Release",
     description:
-      "Fourth quarter results highlighting revenue growth, operating margins, and order backlog across all segments.",
-    type: "Quarterly Report",
+      "Year-end results detailing revenue growth, operating margins, order backlog, and segment performance across all business areas.",
+    type: "Earnings Release",
   },
   {
-    title: "Q3 2023 Earnings",
+    title: "H1 2024 Interim Results",
     description:
-      "Third quarter financial results with segment performance details and updated full-year guidance.",
-    type: "Quarterly Report",
+      "First-half financial performance with updates on defense contract awards, U.S. segment revenue, and revised full-year guidance.",
+    type: "Interim Report",
   },
 ];
 
 const boardMembers = [
-  { name: "Sir Charles Woodburn", title: "Chief Executive Officer" },
+  { name: "Charles Woodburn", title: "Chief Executive" },
   { name: "Brad Greve", title: "Chief Financial Officer" },
-  { name: "Sir Roger Carr", title: "Chairman of the Board" },
-  { name: "Tom Mayfield", title: "Chief Operating Officer" },
+  { name: "Sir Roger Carr", title: "Chairman" },
+  { name: "Tom Arseneault", title: "President & CEO, BAE Systems, Inc." },
 ];
 
 const faqs = [
   {
-    question: "How can I purchase BAE Systems shares?",
+    question: "How do I buy BAESY shares in the United States?",
     answer:
-      "BAE Systems shares are listed on the London Stock Exchange (ticker: BA.) and can be purchased through any authorised stockbroker, investment platform, or financial advisor. Shares are also available as American Depositary Shares (ADSs) on the OTC market in the United States.",
+      "U.S. investors can purchase BAE Systems American Depositary Shares (ADSs) under the ticker symbol BAESY on the OTC market through any major U.S. brokerage, including Fidelity, Charles Schwab, and TD Ameritrade. Each ADS represents four ordinary shares of BAE Systems plc.",
+  },
+  {
+    question: "What is the difference between BA. and BAESY?",
+    answer:
+      "BA. is the ticker for BAE Systems plc ordinary shares traded on the London Stock Exchange in British pounds. BAESY is the ticker for American Depositary Shares traded on the U.S. OTC market in U.S. dollars. Each BAESY ADS represents four BA. ordinary shares.",
   },
   {
     question: "When does BAE Systems pay dividends?",
     answer:
-      "BAE Systems typically pays dividends twice a year. The interim dividend is usually paid in November, and the final dividend is paid in June following approval at the Annual General Meeting.",
+      "BAE Systems typically pays dividends twice per year. The interim dividend is generally paid in December, and the final dividend is paid in June following approval at the Annual General Meeting. U.S. ADS holders receive dividends in U.S. dollars, converted from British pounds by the depositary bank.",
   },
   {
-    question: "Where can I find historical financial data?",
+    question: "Where can I find SEC filings for BAE Systems?",
     answer:
-      "Historical financial data, including past annual reports, earnings releases, and investor presentations, is available in the Financial Reports section of our Investor Relations page. You may also request information directly from our Investor Relations team.",
+      "As a foreign private issuer, BAE Systems files annual reports on Form 20-F with the U.S. Securities and Exchange Commission. These filings are available on the SEC's EDGAR database and through our Investor Relations page.",
   },
   {
-    question: "How do I contact the Investor Relations team?",
+    question: "How do I contact the Investor Relations team from the U.S.?",
     answer:
-      "You can reach our Investor Relations team by email at investors@baesystems.com or by calling +44 (0) 20 7834 7000. Our team is available during normal business hours, Monday through Friday.",
+      "U.S.-based investors can reach our Investor Relations team by email at investors@baesystems.com or by calling +1 (703) 312-6100 during Eastern Time business hours, Monday through Friday.",
   },
 ];
 
@@ -67,9 +72,15 @@ export default function Investors() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Investor Relations
           </h1>
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3 mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Financial performance, governance, and shareholder information for
-            BAE Systems plc.
+            Financial performance, corporate governance, and shareholder
+            resources for BAE Systems plc — serving U.S. and global investors.
+          </p>
+          <p className="text-sm text-gray-400 mt-4 max-w-2xl mx-auto">
+            BAE Systems plc is listed on the London Stock Exchange (LSE:&nbsp;BA.)
+            with American Depositary Shares trading on the U.S. OTC market
+            (OTC:&nbsp;BAESY).
           </p>
         </div>
       </section>
@@ -109,32 +120,67 @@ export default function Investors() {
           <h2 className="text-3xl font-bold text-navy-900 text-center mb-10">
             Stock Information
           </h2>
-          <div className="bg-white rounded-lg shadow p-8 max-w-2xl mx-auto">
-            <div className="grid grid-cols-2 gap-6 text-center">
-              <div>
-                <p className="text-sm text-gray-500">Ticker</p>
-                <p className="text-2xl font-bold text-navy-900">BA. (LSE)</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* US OTC */}
+            <div className="bg-white rounded-lg shadow p-8">
+              <h3 className="text-lg font-bold text-navy-900 mb-4 text-center">
+                U.S. OTC Market
+              </h3>
+              <div className="grid grid-cols-2 gap-6 text-center">
+                <div>
+                  <p className="text-sm text-gray-500">Ticker</p>
+                  <p className="text-2xl font-bold text-accent-500">BAESY</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">ADS Price (USD)</p>
+                  <p className="text-2xl font-bold text-navy-900">$67.50</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Market Cap (USD)</p>
+                  <p className="text-2xl font-bold text-navy-900">$49.2B</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">52-Week Range</p>
+                  <p className="text-2xl font-bold text-navy-900">
+                    $48.10 – $72.85
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm text-gray-500">Share Price</p>
-                <p className="text-2xl font-bold text-navy-900">£13.42</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500">Market Cap</p>
-                <p className="text-2xl font-bold text-navy-900">£38.7B</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500">52-Week Range</p>
-                <p className="text-2xl font-bold text-navy-900">
-                  £9.80 – £14.10
-                </p>
+              <p className="text-xs text-gray-400 text-center mt-4">
+                Each ADS represents 4 ordinary shares
+              </p>
+            </div>
+            {/* LSE */}
+            <div className="bg-white rounded-lg shadow p-8">
+              <h3 className="text-lg font-bold text-navy-900 mb-4 text-center">
+                London Stock Exchange
+              </h3>
+              <div className="grid grid-cols-2 gap-6 text-center">
+                <div>
+                  <p className="text-sm text-gray-500">Ticker</p>
+                  <p className="text-2xl font-bold text-accent-500">BA.</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Share Price (GBP)</p>
+                  <p className="text-2xl font-bold text-navy-900">£13.42</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Market Cap (GBP)</p>
+                  <p className="text-2xl font-bold text-navy-900">£38.7B</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">52-Week Range</p>
+                  <p className="text-2xl font-bold text-navy-900">
+                    £9.80 – £14.10
+                  </p>
+                </div>
               </div>
             </div>
-            <p className="text-xs text-gray-400 text-center mt-6">
-              Data shown is illustrative and may not reflect current market
-              values.
-            </p>
           </div>
+          <p className="text-xs text-gray-400 text-center mt-6">
+            Data shown is illustrative and may not reflect current market
+            values.
+          </p>
         </div>
       </section>
 
@@ -171,10 +217,10 @@ export default function Investors() {
                 Annual General Meeting
               </h3>
               <p className="text-gray-600">
-                The 2024 Annual General Meeting is scheduled for{" "}
-                <span className="font-semibold">May 9, 2024</span> at the QEII
-                Centre, London. Shareholders may attend in person or vote by
-                proxy.
+                The 2025 Annual General Meeting is scheduled for{" "}
+                <span className="font-semibold">May 8, 2025</span>. U.S.-based
+                shareholders holding ADSs may instruct the depositary bank to
+                vote on their behalf or submit a proxy through their broker.
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow">
@@ -182,10 +228,11 @@ export default function Investors() {
                 Dividend Information
               </h3>
               <p className="text-gray-600">
-                The final dividend for 2023 of{" "}
-                <span className="font-semibold">16.0p per share</span> was paid
-                on 28 June 2024. The interim dividend of 11.4p per share was
-                paid in November 2023.
+                The final dividend for FY2024 of{" "}
+                <span className="font-semibold">17.8p per ordinary share</span>{" "}
+                is payable in June 2025. U.S. ADS holders receive dividends in
+                U.S. dollars, converted by the depositary bank and paid net of
+                applicable withholding taxes.
               </p>
             </div>
           </div>
@@ -235,7 +282,12 @@ export default function Investors() {
               investors@baesystems.com
             </a>
           </p>
-          <p className="text-gray-300">Phone: +44 (0) 20 7834 7000</p>
+          <p className="text-gray-300 mb-4">
+            U.S. Investor Relations: +1 (703) 312-6100
+          </p>
+          <p className="text-sm text-gray-400">
+            BAE Systems, Inc. — 1101 Wilson Blvd, Arlington, VA 22209
+          </p>
         </div>
       </section>
     </div>

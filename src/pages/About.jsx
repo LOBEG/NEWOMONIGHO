@@ -3,153 +3,156 @@ import { Link } from "react-router-dom";
 const milestones = [
   {
     year: "1999",
-    title: "Founded",
+    title: "Formation of BAE Systems",
     description:
-      "BAE Systems was formed through the merger of British Aerospace and Marconi Electronic Systems, creating one of the world's largest defence companies.",
+      "BAE Systems was formed through the merger of British Aerospace and Marconi Electronic Systems, creating one of the world's largest defense and aerospace companies.",
   },
   {
     year: "2000",
-    title: "First Major Contract",
+    title: "BAE Systems, Inc. Established",
     description:
-      "Secured a landmark multi-billion pound defence contract, establishing the company as a trusted partner to governments worldwide.",
+      "BAE Systems, Inc. was established as the primary U.S. subsidiary, headquartered in the Washington, D.C. area to serve the United States Department of Defense and federal agencies.",
   },
   {
     year: "2005",
-    title: "Global Expansion",
+    title: "Major U.S. Defense Contract Wins",
     description:
-      "Expanded operations across the Americas, Asia-Pacific, and the Middle East, building a truly international defence and security business.",
+      "Secured significant U.S. defense contracts and expanded combat vehicle programs, solidifying BAE Systems, Inc. as a critical partner to the American warfighter.",
   },
   {
     year: "2010",
-    title: "Cyber Division Launch",
+    title: "Cybersecurity & Intelligence Expansion",
     description:
-      "Launched a dedicated cyber security division to address the growing threat landscape in the digital domain.",
+      "Grew capabilities in cybersecurity, signals intelligence, and information technology to support U.S. intelligence community and federal agency missions.",
   },
   {
     year: "2015",
-    title: "Space Technology Entry",
+    title: "Space & Mission Systems Growth",
     description:
-      "Entered the space technology sector with advanced satellite systems and space-based intelligence capabilities.",
+      "Expanded space and mission systems programs, delivering advanced satellite payloads, electronic warfare systems, and sensor technologies to the U.S. military.",
   },
   {
     year: "2020",
-    title: "AI & Autonomous Systems",
+    title: "AI & Autonomous Systems Investment",
     description:
-      "Pioneered artificial intelligence and autonomous systems programmes, shaping the future of defence technology.",
+      "Invested heavily in artificial intelligence, machine learning, and autonomous systems to accelerate next-generation defense capabilities for the United States.",
+  },
+  {
+    year: "2024",
+    title: "Continued U.S. Growth",
+    description:
+      "Achieved over $15.8 billion in U.S. revenue with continued growth across all sectors, reinforcing BAE Systems, Inc. as a top-ten U.S. prime defense contractor.",
   },
 ];
 
 const values = [
   {
-    icon: "💡",
-    title: "Innovation",
+    icon: "🛡️",
+    title: "Trusted",
     description:
-      "Pushing the boundaries of technology to develop solutions that keep people safe and nations secure.",
+      "We are a trusted partner to the U.S. warfighter, delivering reliable solutions that protect our servicemen and women at home and abroad.",
+  },
+  {
+    icon: "🚀",
+    title: "Innovative",
+    description:
+      "We pioneer breakthrough technologies in electronic systems, cyber, autonomy, and space to keep America at the forefront of defense.",
+  },
+  {
+    icon: "💪",
+    title: "Bold",
+    description:
+      "We take on the most complex national security challenges with determination, delivering mission-critical solutions when our country needs them most.",
   },
   {
     icon: "🤝",
-    title: "Integrity",
+    title: "Inclusive",
     description:
-      "Upholding the highest ethical standards in everything we do, earning the trust of our customers and communities.",
-  },
-  {
-    icon: "⭐",
-    title: "Excellence",
-    description:
-      "Striving for the highest quality in our products, services, and the way we work together every day.",
-  },
-  {
-    icon: "🔗",
-    title: "Collaboration",
-    description:
-      "Working together across teams, borders, and industries to deliver the best outcomes for our stakeholders.",
-  },
-  {
-    icon: "🌍",
-    title: "Responsibility",
-    description:
-      "Acting responsibly towards our people, communities, and the environment to create a sustainable future.",
+      "We foster a diverse and inclusive workforce across the United States, recognizing that our greatest strength is our people and the perspectives they bring.",
   },
 ];
 
 const leaders = [
   {
-    initials: "CM",
-    name: "Charles Morrison",
-    title: "Chief Executive Officer",
+    initials: "TH",
+    name: "Thomas Harrington",
+    title: "President & CEO",
     color: "bg-navy-700",
-    bio: "Over 25 years of leadership in the defence industry, driving strategic growth and operational excellence.",
+    bio: "Over 30 years of leadership in the U.S. defense industry, guiding BAE Systems, Inc. through strategic growth and operational excellence.",
   },
   {
-    initials: "SR",
-    name: "Sarah Richardson",
-    title: "Chief Technology Officer",
-    color: "bg-accent-500",
-    bio: "A visionary technologist leading R&D across cyber, AI, and next-generation defence platforms.",
-  },
-  {
-    initials: "JP",
-    name: "James Patterson",
+    initials: "MR",
+    name: "Margaret Reeves",
     title: "Chief Financial Officer",
-    color: "bg-steel-600",
-    bio: "Expert in global finance and capital strategy, ensuring sustainable growth and shareholder value.",
+    color: "bg-accent-500",
+    bio: "Oversees all financial operations for BAE Systems, Inc., ensuring fiscal discipline and sustainable growth across the U.S. business.",
   },
   {
-    initials: "AW",
-    name: "Amara Williams",
+    initials: "RK",
+    name: "Rajesh Kapoor",
+    title: "Chief Technology Officer",
+    color: "bg-steel-600",
+    bio: "Leads research and development across AI, cyber, electronic warfare, and next-generation defense platforms for U.S. programs.",
+  },
+  {
+    initials: "CB",
+    name: "Catherine Brooks",
     title: "Chief Operating Officer",
     color: "bg-navy-600",
-    bio: "Oversees worldwide operations and programme delivery, optimising performance across all business units.",
+    bio: "Manages day-to-day operations and program delivery across all BAE Systems, Inc. business units and U.S. facilities.",
   },
   {
-    initials: "DK",
-    name: "David Kim",
-    title: "VP Engineering",
+    initials: "JM",
+    name: "Jason Mitchell",
+    title: "VP Electronic Systems",
     color: "bg-accent-600",
-    bio: "Leads engineering teams building cutting-edge systems in aerospace, naval, and land defence domains.",
+    bio: "Directs the Electronic Systems sector, delivering advanced electronic warfare, sensors, and precision munitions to the U.S. military.",
   },
   {
-    initials: "LT",
-    name: "Laura Thompson",
-    title: "VP Human Resources",
+    initials: "DP",
+    name: "Diana Patel",
+    title: "VP Intelligence & Security",
     color: "bg-steel-500",
-    bio: "Champions a diverse and inclusive workplace, attracting and developing top talent globally.",
+    bio: "Leads intelligence and security solutions supporting the U.S. intelligence community, Department of Defense, and federal civilian agencies.",
   },
 ];
 
 const offices = [
-  { city: "London HQ", country: "United Kingdom", flag: "🇬🇧" },
-  { city: "Washington DC", country: "United States", flag: "🇺🇸" },
-  { city: "San Diego", country: "United States", flag: "🇺🇸" },
-  { city: "Adelaide", country: "Australia", flag: "🇦🇺" },
-  { city: "Warton", country: "United Kingdom", flag: "🇬🇧" },
-  { city: "Barrow-in-Furness", country: "United Kingdom", flag: "🇬🇧" },
+  { city: "Arlington, VA", state: "Headquarters", flag: "🇺🇸" },
+  { city: "Nashua, NH", state: "Electronic Systems", flag: "🇺🇸" },
+  { city: "Sterling Heights, MI", state: "Combat Vehicles", flag: "🇺🇸" },
+  { city: "San Diego, CA", state: "Ship Repair", flag: "🇺🇸" },
+  { city: "Austin, TX", state: "Technology Solutions", flag: "🇺🇸" },
+  { city: "Huntsville, AL", state: "Space & Mission Systems", flag: "🇺🇸" },
+  { city: "Minneapolis, MN", state: "Weapon Systems", flag: "🇺🇸" },
+  { city: "El Segundo, CA", state: "Space & Sensors", flag: "🇺🇸" },
+  { city: "Merrimack, NH", state: "Electronic Combat Solutions", flag: "🇺🇸" },
 ];
 
 const benefits = [
   {
-    icon: "📚",
-    title: "Professional Development",
+    icon: "💰",
+    title: "401(k) Matching",
     description:
-      "Continuous learning opportunities, mentorship programmes, and tuition assistance to advance your career.",
+      "BAE Systems, Inc. offers a competitive 401(k) retirement savings plan with generous company matching to help you build a secure financial future.",
   },
   {
     icon: "❤️",
-    title: "Health & Wellness",
+    title: "Comprehensive Health Insurance",
     description:
-      "Comprehensive medical, dental, and mental health support to keep you and your family healthy.",
+      "Full medical, dental, and vision coverage for you and your family, including access to wellness programs and mental health resources.",
   },
   {
-    icon: "⚖️",
-    title: "Work-Life Balance",
+    icon: "📚",
+    title: "Tuition Reimbursement",
     description:
-      "Flexible working arrangements, generous leave policies, and family-friendly benefits.",
+      "We invest in your growth with tuition reimbursement for undergraduate and graduate programs at accredited U.S. colleges and universities.",
   },
   {
-    icon: "💰",
-    title: "Competitive Compensation",
+    icon: "🏖️",
+    title: "Paid Time Off",
     description:
-      "Industry-leading salaries, performance bonuses, and retirement plans that reward your contributions.",
+      "Generous paid time off including vacation days, personal days, and federal holidays so you can recharge and spend time with your family.",
   },
 ];
 
@@ -162,24 +165,57 @@ export default function About() {
       <section className="min-h-[50vh] flex items-center bg-dark-900 text-white">
         <div className="max-w-5xl mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-6">
-            About BAE Systems
+            Who We Are
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-navy-200 leading-relaxed">
-            We are a global defence, aerospace, and security company delivering
-            a full range of products and services for air, land, and naval
-            forces, as well as advanced electronics, security, information
-            technology solutions, and support services.
+            BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc and a
+            top-ten prime defense contractor. Headquartered in Arlington,
+            Virginia, we deliver advanced defense, aerospace, and security
+            solutions to the United States Department of Defense, intelligence
+            community, and federal agencies.
           </p>
         </div>
       </section>
 
-      {/* Company History Timeline */}
+      {/* Company Overview */}
       <section className="py-20 px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-14">
-            Our Journey
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
+            Company Overview
           </h2>
-          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3 mb-10" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="bg-navy-50 rounded-xl p-6">
+              <p className="text-4xl font-heading font-bold text-accent-500">Top 10</p>
+              <p className="mt-2 text-steel-700 text-sm">U.S. Prime Defense Contractor</p>
+            </div>
+            <div className="bg-navy-50 rounded-xl p-6">
+              <p className="text-4xl font-heading font-bold text-accent-500">~35,000</p>
+              <p className="mt-2 text-steel-700 text-sm">Employees Across the United States</p>
+            </div>
+            <div className="bg-navy-50 rounded-xl p-6">
+              <p className="text-4xl font-heading font-bold text-accent-500">$15.8B+</p>
+              <p className="mt-2 text-steel-700 text-sm">Annual U.S. Revenue</p>
+            </div>
+          </div>
+          <p className="mt-10 text-steel-700 text-center max-w-3xl mx-auto leading-relaxed">
+            BAE Systems, Inc. is a top-ten prime contractor headquartered in
+            Arlington, Virginia. The company employs approximately 35,000 people
+            across the United States, delivering a full range of products and
+            services for air, land, sea, space, and cyber domains. Our work
+            supports every branch of the U.S. armed forces and key federal
+            agencies with solutions that protect national security.
+          </p>
+        </div>
+      </section>
+
+      {/* Our History Timeline */}
+      <section className="bg-navy-50 py-20 px-4 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
+            Our History
+          </h2>
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3 mb-14" />
           <div className="relative">
             <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-navy-200 -translate-x-1/2" />
             {milestones.map((m, i) => (
@@ -209,21 +245,22 @@ export default function About() {
         </div>
       </section>
 
-      {/* Vision & Values */}
-      <section className="bg-navy-50 py-20 px-4 lg:px-8">
+      {/* Our Values */}
+      <section className="py-20 px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
-            Our Vision &amp; Values
+            Our Values
           </h2>
           <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
           <p className="text-center text-steel-700 mb-12 max-w-2xl mx-auto">
-            Our values define who we are and guide every decision we make.
+            Our values shape how we serve the United States and guide every
+            decision we make as a defense partner.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v) => (
               <div
                 key={v.title}
-                className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow border border-steel-100"
               >
                 <span className="text-4xl" role="img" aria-label={v.title}>
                   {v.icon}
@@ -241,17 +278,17 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 px-4 lg:px-8">
+      <section className="bg-steel-50 py-20 px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-12">
+          <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
             Leadership Team
           </h2>
-          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
+          <div className="w-12 h-1 bg-accent-500 mx-auto mt-3 mb-12" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {leaders.map((l) => (
               <div
                 key={l.name}
-                className="bg-steel-100 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
               >
                 <div
                   className={`w-16 h-16 ${l.color} rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto`}
@@ -273,31 +310,31 @@ export default function About() {
         </div>
       </section>
 
-      {/* Global Presence */}
-      <section className="bg-steel-50 py-20 px-4 lg:px-8">
+      {/* U.S. Presence */}
+      <section className="py-20 px-4 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
-            Global Presence
+            U.S. Presence
           </h2>
           <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
           <p className="text-center text-steel-700 mb-12 max-w-2xl mx-auto">
-            With offices and operations around the world, we deliver critical
-            capabilities wherever they are needed.
+            With offices and facilities across the United States, BAE Systems,
+            Inc. delivers critical defense capabilities from coast to coast.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {offices.map((o) => (
               <div
                 key={o.city}
-                className="flex items-center gap-4 bg-white rounded-lg p-4 shadow-sm"
+                className="flex items-center gap-4 bg-white rounded-lg p-4 shadow-sm border border-steel-100"
               >
-                <span className="text-3xl" role="img" aria-label={o.country}>
+                <span className="text-3xl" role="img" aria-label="United States">
                   {o.flag}
                 </span>
                 <div>
                   <p className="font-heading font-semibold text-navy-900">
                     {o.city}
                   </p>
-                  <p className="text-sm text-steel-600">{o.country}</p>
+                  <p className="text-sm text-steel-600">{o.state}</p>
                 </div>
               </div>
             ))}
@@ -306,21 +343,21 @@ export default function About() {
       </section>
 
       {/* Culture & Benefits */}
-      <section className="py-20 px-4 lg:px-8">
+      <section className="bg-navy-50 py-20 px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-navy-900 text-center mb-4">
             Culture &amp; Benefits
           </h2>
           <div className="w-12 h-1 bg-accent-500 mx-auto mt-3" />
           <p className="text-center text-steel-700 mb-12 max-w-2xl mx-auto">
-            Discover what it's like to work at BAE Systems and the benefits that
-            support your career and wellbeing.
+            Discover what it&apos;s like to work at BAE Systems, Inc. and the
+            benefits that support your career and well-being.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {benefits.map((b) => (
               <div
                 key={b.title}
-                className="bg-navy-50 rounded-xl p-6 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow"
               >
                 <span className="text-3xl" role="img" aria-label={b.title}>
                   {b.icon}
@@ -359,13 +396,17 @@ export default function About() {
       {/* CTA */}
       <section className="py-16 px-4 lg:px-8 text-center">
         <h2 className="text-2xl font-heading font-bold text-navy-900 mb-4">
-          Ready to join us?
+          Join Our Team
         </h2>
+        <p className="text-steel-700 mb-6 max-w-xl mx-auto">
+          Build your career with BAE Systems, Inc. and help protect those who
+          protect us.
+        </p>
         <Link
           to="/careers"
           className="inline-block px-8 py-3 rounded-lg bg-accent-500 hover:bg-accent-600 text-white font-semibold transition-colors"
         >
-          View Open Positions
+          Join Our Team
         </Link>
       </section>
     </main>
