@@ -1,0 +1,9 @@
+Required (Netlify environment variables):
+- TELEGRAM_BOT_TOKEN
+- TELEGRAM_CHAT_ID
+
+Recommended:
+- DATABASE_URL
+- STORAGE_PROVIDER (s3|gcs|none)
+- S3_BUCKET / S3_REGION / AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY
+- NEXT_PUBLIC_API_BASE
